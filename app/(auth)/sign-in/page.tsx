@@ -1,7 +1,6 @@
 import React from "react";
 
-const SignIn = () => {
-  return <div>page</div>;
-};
+import { SignInSchema } from "@/lib/validations";
+const SignIn = () => {};
 
 export default SignIn;
