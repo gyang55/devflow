@@ -26,12 +26,9 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+const RootLayout = async ({ children }: { children: React.ReactNode }) => {
   const session = await auth();
+
   return (
     <html lang="en" suppressHydrationWarning>
       <SessionProvider session={session}>
@@ -51,4 +48,6 @@ export default async function RootLayout({
       </SessionProvider>
     </html>
   );
-}
+};
+
+export default RootLayout;
